@@ -10,7 +10,7 @@ public class GameHelper {
     private int roundBet;
     private Player currentPlayer;
     private final int minimumBet = 2;
-    private static final int MAX_ROUNDS = 4; // Change this value as needed
+    private static final int MAX_ROUNDS = 4; 
     static int money; 
     public GameHelper(List<Player> players) {
         this.players = players;
@@ -118,8 +118,8 @@ public class GameHelper {
         
     }
      public void increaseBalance(int amount) {
-        // Assuming balance is an attribute of the Player class
-        currentPlayer.addToChips(amount);
+
+         currentPlayer.addToChips(amount);
     }
 
     public List<Card> getCommunityCards() {
@@ -173,7 +173,7 @@ public class GameHelper {
      */
     public boolean checkEndOfGame() {
 
-        return getCurrentRound() >= getMaxRounds(); // Change the condition based on your requirements
+        return getCurrentRound() >= getMaxRounds(); 
 }
     
     public boolean isGameOver() {
@@ -209,7 +209,6 @@ public class GameHelper {
     }
 
 
-// Implement this method based on your requirements
     void updatePot(int betAmount) {
 
         pot += betAmount;
