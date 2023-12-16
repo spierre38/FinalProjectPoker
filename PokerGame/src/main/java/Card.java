@@ -13,7 +13,6 @@ public class Card {
     private Rank rank;
     private String img; 
 
-    // Constructor to initialize a card with a given suit and rank
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
