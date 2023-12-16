@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 public final class PokerGui extends javax.swing.JFrame {
     
     GameHelper game;
-    private int selectedBetAmount = 0;  // Add this variable to store the selected bet amount
+    private int selectedBetAmount = 0;  // Added this variable to store the selected bet amount
     private Player currentPlayer;
 
 
@@ -68,7 +68,7 @@ public final class PokerGui extends javax.swing.JFrame {
     }
         
 private String constructConsoleLogContent() {
-    // Customize this method based on how you want to update the console log
+
     String logContent = "Round: " + game.getCurrentRound() + "\n";
     logContent += "Pot: $" + game.getPot() + "\n";
 
