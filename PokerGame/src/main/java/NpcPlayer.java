@@ -3,14 +3,13 @@ import java.util.List;
 public class NpcPlayer extends Player {
     private static final List<String> RANDOM_NAMES = List.of(
             "Alpha", "Bravo", "Charlie", "Delta", "Echo",
-            // ... (existing names)
             "Whiskey", "X-Ray", "Yankee", "Zulu",
             "Ace", "King", "Queen", "Jack");
 
     private static int npcCount = 0;
 
     public NpcPlayer(int initialChips) {
-        super(generateNpcName(), initialChips, false); // Set isNpc to false
+        super(generateNpcName(), initialChips, false); 
     }
 
     private static String generateNpcName() {
@@ -30,7 +29,7 @@ public class NpcPlayer extends Player {
         if (game.getCurrentRound() == 0) {
             
             
-            int minimumBet = 2; // Minimum bet for preflop
+            int minimumBet = 10; // Minimum bet for preflop
             int randomRaiseThreshold = 80; // Percentage chance to randomly raise
 
             if (Math.random() * 100 < randomRaiseThreshold) {
