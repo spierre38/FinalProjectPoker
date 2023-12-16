@@ -6,10 +6,9 @@ import java.util.stream.Collectors;
 public class Hand {
     private List<Card> cards;
 
-    // Constructor
     public Hand(List<Card> cards) {
         this.cards = cards;
-        // Ensure the cards are sorted by rank for easier evaluation
+        //  the cards are sorted by rank for easier evaluation
         Collections.sort(this.cards, Collections.reverseOrder());
     }
 
@@ -25,7 +24,7 @@ public class Hand {
     // Method to add a card to the hand
     public void addCard(Card card) {
         cards.add(card);
-        // Ensure the cards are sorted by rank for easier evaluation
+        //  the cards are sorted by rank for easier evaluation
         Collections.sort(cards, Collections.reverseOrder());
     }
     
@@ -38,13 +37,11 @@ public int evaluate(GameHelper game) {
         return -1;
     }
 
-    // Evaluate the strength of the best hand
     int bestHandStrength = evaluateBestHand(game);
     
     return bestHandStrength;
 }
 
-// New method to evaluate the best hand
 public int evaluateBestHand(GameHelper game) {
     int bestHandStrength = -1;
 
@@ -72,7 +69,6 @@ public int evaluateBestHand(GameHelper game) {
     return bestHandStrength;
 }
 
-    // Helper methods for hand evaluation
 
     private boolean isStraightFlush() {
         return isStraight() && isFlush();
